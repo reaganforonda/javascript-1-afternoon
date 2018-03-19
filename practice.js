@@ -181,13 +181,13 @@ function pond() {
 let globalScope = ["duck"];
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = ["duck"];
+let bathroomScope = ["duck", "rubberDuck", "sailorDuck"];
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = ["duck", "sailorDuck", "rubberDuck", "realDuck"];
+let bathtubScope = ["duck", "sailorDuck", "rubberDuck"];
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = ["duck"];
+let pondScope = ["duck", "realDuck"];
 
 //////////////////PROBLEM 10////////////////////
 
@@ -196,13 +196,20 @@ let pondScope = ["duck"];
 
 //Code Here
 function outerFn(){
+    var x = function returnName(){
+      return "Reagan Foronda";
+    }
+
+    return x;
 
 }
 
 //Now save the result of invoking outerFn into a variable called innerFn.
 
 //Code Here
+var innerFn = outerFn();
 
 //Now invoke innerFn and save the result to a variable called finalResult.
 
 //Code Here
+var finalResult = innerFn();
